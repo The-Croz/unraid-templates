@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bookorbit-db</Name>
+  <Repository>pgvector/pgvector:pg18</Repository>
+  <Registry>https://hub.docker.com/r/pgvector/pgvector</Registry>
+  <Branch/>
+  <Network>bookorbit</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/bookorbit/bookorbit/discussions</Support>
+  <Project>https://bookorbit.app/</Project>
+  <Overview>PostgreSQL 18 + pgvector database for BookOrbit. This container has no web UI of its own - it exists purely to back the bookorbit container.&#10;&#10;This container must be able to reach, and be reached by, bookorbit by container name. Before installing, go to Docker Settings and create a custom network named "bookorbit". In Unraid terminal, enter docker network create bookorbit and then both bookorbit-db and bookorbit need to be attached to that network.&#10;&#10;The POSTGRES_USER, POSTGRES_PASSWORD, and POSTGRES_DB values you set here MUST exactly match the values you enter in bookorbit.</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/unraid-templates/main/bookorbit-db.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/postgres/logo.png</Icon>
+  <ExtraParams>--network bookorbit</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Postgres User" Target="POSTGRES_USER" Default="bookorbit" Mode="" Description="Database username. Must match POSTGRES_USER in the bookorbit container." Type="Variable" Display="always" Required="true" Mask="false">bookorbit</Config>
+  <Config Name="Postgres Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Database password. Use a strong random value (e.g. openssl rand -hex 24). Must match POSTGRES_PASSWORD in bookorbit." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Postgres DB" Target="POSTGRES_DB" Default="bookorbit" Mode="" Description="Database name. Must match POSTGRES_DB in the bookorbit container." Type="Variable" Display="always" Required="true" Mask="false">bookorbit</Config>
+  <Config Name="PGDATA" Target="PGDATA" Default="/var/lib/postgresql/data/pgdata" Mode="" Description="Internal Postgres data directory inside the container. Leave as default." Type="Variable" Display="advanced" Required="false" Mask="false">/var/lib/postgresql/data/pgdata</Config>
+  <Config Name="Database Storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/bookorbit-db/data" Mode="rw" Description="Where Postgres stores its data files on the array/cache." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bookorbit-db/data</Config>
+</Container>
