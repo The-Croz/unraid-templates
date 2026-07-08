@@ -26,5 +26,5 @@
   <Config Name="Postgres Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Database password. Must match POSTGRES_PASSWORD in bookorbit." Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Postgres DB" Target="POSTGRES_DB" Default="bookorbit" Mode="" Description="Database name. Must match POSTGRES_DB in the bookorbit container." Type="Variable" Display="always" Required="true" Mask="false">bookorbit</Config>
   <Config Name="PGDATA" Target="PGDATA" Default="/var/lib/postgresql/data/pgdata" Mode="" Description="Internal Postgres data directory inside the container. Leave as default." Type="Variable" Display="advanced" Required="false" Mask="false">/var/lib/postgresql/data/pgdata</Config>
-  <Config Name="Database Storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/bookorbit-db/data" Mode="rw" Description="Where Postgres stores its data files on the array/cache." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bookorbit-db/data</Config>
+  <Config Name="Database Storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/bookorbit-db" Mode="rw" Description="Where Postgres stores its data files on the array/cache." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bookorbit-db/data</Config>
 </Container>
