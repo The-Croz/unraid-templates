@@ -47,7 +47,6 @@
   <!-- Advanced / rarely-changed variables -->
   <Config Name="Book Dock Path" Target="BOOK_DOCK_PATH" Default="" Mode="" Description="Advanced: internal path for the Book Dock drop-folder feature. Leave blank unless you've read the Book Dock docs and mapped an additional volume for it." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Fix Permissions" Target="BOOKORBIT_FIX_PERMISSIONS" Default="true" Mode="" Description="BookOrbit automatically repairs ownership of the App Data folder on startup. Set to false only if your platform manages that folder's ownership externally." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>  
-  <Config Name="Client URL" Target="CLIENT_URL" Default="" Mode="" Description="Only needed if the frontend is served from a different domain than App URL. Leave blank to default to App URL." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Node Max Old Space Size" Target="NODE_MAX_OLD_SPACE_SIZE" Default="2048" Mode="" Description="Node.js heap limit in MB. Raise this (e.g. 4096) for very large libraries if you see out-of-memory errors. 'auto' lets Node decide." Type="Variable" Display="advanced" Required="false" Mask="false">2048</Config>
   <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Mode="" Description="Log verbosity. Set to 'debug' for troubleshooting." Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
 </Container>
