@@ -4,7 +4,7 @@
   <Repository>pgvector/pgvector:pg18</Repository>
   <Registry>https://hub.docker.com/r/pgvector/pgvector</Registry>
   <Branch/>
-  <Network>bookorbit</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
