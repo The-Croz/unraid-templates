@@ -21,7 +21,7 @@
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Requires>bookorbit-db must be created and started first, and on the same "bookorbit" custom Docker network.</Requires>
+  <Requires>bookorbit-db must be created and started first and reachable by this container.</Requires>
 
   <!-- Networking -->
   <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Host port used to reach BookOrbit. Maps to the fixed internal port 3000." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
