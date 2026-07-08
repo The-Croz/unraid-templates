@@ -35,8 +35,8 @@
   <Config Name="Postgres User" Target="POSTGRES_USER" Default="bookorbit" Mode="" Description="Must exactly match POSTGRES_USER on the bookorbit-db container." Type="Variable" Display="always" Required="true" Mask="false">bookorbit</Config>
   <Config Name="Postgres Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Must exactly match POSTGRES_PASSWORD on the bookorbit-db container." Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Postgres DB" Target="POSTGRES_DB" Default="bookorbit" Mode="" Description="Must exactly match POSTGRES_DB on the bookorbit-db container." Type="Variable" Display="always" Required="true" Mask="false">bookorbit</Config>
-  <Config Name="Postgres Host" Target="POSTGRES_HOST" Default="" Mode="" Description="IP of bookorbit-db container or 'bookorbit-db' if both containers share a custom network." Type="Variable" Display="always" Required="true" Mask="false">bookorbit-db</Config>
-  <Config Name="Postgres Port" Target="POSTGRES_PORT" Default="5432" Mode="" Description="Port the Postgres container listens on internally." Type="Variable" Display="advanced" Required="false" Mask="false">5432</Config>
+  <Config Name="Postgres Host" Target="POSTGRES_HOST" Default="" Mode="" Description="IP of bookorbit-db container or 'bookorbit-db' if both containers share a custom network." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Postgres Port" Target="POSTGRES_PORT" Default="5432" Mode="" Description="Port the Postgres container listens on internally." Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
   <Config Name="JWT Secret" Target="JWT_SECRET" Default="" Mode="" Description="Long random secret used to sign login tokens. Generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Setup Bootstrap Token" Target="SETUP_BOOTSTRAP_TOKEN" Default="" Mode="" Description="One-time token used to claim the admin account on first setup. Generate with: openssl rand -hex 16" Type="Variable" Display="always" Required="true" Mask="true"></Config>
 
