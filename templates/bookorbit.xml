@@ -14,7 +14,7 @@
   <Category>MediaApp:Books</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/unraid-templates/main/bookorbit.xml</TemplateURL>
-  <Icon>https://github.com/bookorbit.png</Icon>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/bookorbit.png</Icon>
   <ExtraParams>--init --read-only --tmpfs /tmp --cap-drop=ALL --cap-add=CHOWN --cap-add=DAC_OVERRIDE --cap-add=FOWNER --cap-add=SETGID --cap-add=SETUID --security-opt no-new-privileges:true --stop-timeout 30 -e NODE_ENV=production -e PORT=3000 --health-cmd="node -e \"const p=process.env.PORT||3000;fetch('http://127.0.0.1:'+p+'/api/v1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\"" --health-interval=30s --health-timeout=5s --health-retries=3 --health-start-period=20s</ExtraParams>
   <PostArgs/>
   <CPUset/>
