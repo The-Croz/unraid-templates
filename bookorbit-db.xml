@@ -13,7 +13,7 @@
   <Overview>PostgreSQL 18 + pgvector database for BookOrbit. This container has no web UI of its own - it exists purely to back the bookorbit container.&#10;&#10;This container must be able to reach, and be reached by, bookorbit by container name. Before installing, go to Docker Settings and create a custom network named "bookorbit". In Unraid terminal, enter docker network create bookorbit and then both bookorbit-db and bookorbit need to be attached to that network.&#10;&#10;The POSTGRES_USER, POSTGRES_PASSWORD, and POSTGRES_DB values you set here MUST exactly match the values you enter in bookorbit.</Overview>
   <Category>Tools:Utilities</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/unraid-templates/main/bookorbit-db.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/The-Croz/unraid-templates/main/bookorbit-db.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/docker-library/docs/master/postgres/logo.png</Icon>
   <ExtraParams>--network bookorbit</ExtraParams>
   <PostArgs/>
