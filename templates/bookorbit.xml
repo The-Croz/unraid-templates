@@ -10,7 +10,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/bookorbit/bookorbit/discussions</Support>
   <Project>https://bookorbit.app/</Project>
-  <Overview>BookOrbit is a self-hosted digital library and reading platform for EPUB, MOBI, AZW3, PDF, CBZ/CBR comics, and M4B/MP3 audiobooks, with sync to Kobo and KOReader devices, rich metadata lookup, reading stats, OPDS, and multi-user/OIDC support.&#10;&#10;THIS APP REQUIRES A COMPANION DATABASE. Install the "bookorbit-db" template FIRST and let it fully start (~20-30 seconds) before starting this container.&#10;&#10;Both containers must share a custom Docker network if they are setup to reach each other by name. Before installing, go to Docker Settings and create a custom network named "bookorbit" (Docker -&gt; Add a new network -&gt; name it "bookorbit", bridge driver), then attach both containers to it. Otherwise, use the database's IP and port to reach it.&#10;&#10;Required secrets - generate these yourself before filling in the fields below:&#10;  openssl rand -hex 24   -&gt; Postgres Password (also set on bookorbit-db)&#10;  openssl rand -hex 32   -&gt; JWT Secret&#10;  openssl rand -hex 16   -&gt; Setup Bootstrap Token&#10;&#10;After both containers are running, open App URL in your browser. You'll be redirected to a setup wizard - use your Setup Bootstrap Token to create the admin account.&#10;&#10;Full docs: https://bookorbit.app/installation.html</Overview>
+  <Overview>BookOrbit is a self-hosted digital library and reading platform for EPUB, MOBI, AZW3, PDF, CBZ/CBR comics, and M4B/MP3 audiobooks, with sync to Kobo and KOReader devices, rich metadata lookup, reading stats, OPDS, and multi-user/OIDC support.&#10;&#10;THIS APP REQUIRES A COMPANION DATABASE. Install the "bookorbit-db" template FIRST or an instance of pgvector-18 and let it fully start (~20-30 seconds) before starting this container.&#10;&#10;Both containers must share a custom Docker network if they are setup to reach each other by name. Before installing, go to Docker Settings and create a custom network named "bookorbit" (Docker -&gt; Add a new network -&gt; name it "bookorbit", bridge driver), then attach both containers to it. Otherwise, use the database's IP and port to reach it.&#10;&#10;Required secrets - generate these yourself before filling in the fields below:&#10;  openssl rand -hex 24   -&gt; Postgres Password (also set on bookorbit-db)&#10;  openssl rand -hex 32   -&gt; JWT Secret&#10;  openssl rand -hex 16   -&gt; Setup Bootstrap Token&#10;&#10;After both containers are running, open App URL in your browser. You'll be redirected to a setup wizard - use your Setup Bootstrap Token to create the admin account.&#10;&#10;Full docs: https://bookorbit.app/installation.html</Overview>
   <Category>MediaApp:Books</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/The-Croz/unraid-templates/main/bookorbit.xml</TemplateURL>
@@ -21,7 +21,7 @@
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Requires>bookorbit-db must be created and started first and reachable by this container.</Requires>
+  <Requires>bookorbit-db/pgvector-18 must be created and started first and reachable by this container.</Requires>
 
   <!-- Networking -->
   <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Host port used to reach BookOrbit. Maps to the fixed internal port 3000." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
