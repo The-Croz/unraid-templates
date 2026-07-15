@@ -27,7 +27,7 @@
   <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Host port used to reach BookOrbit. Maps to the fixed internal port 3000." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
 
   <!-- Paths -->
-  <Config Name="Books Folder" Target="/books" Default="/mnt/user/media/books" Mode="rw" Description="Host folder where your book files live. Point this at your existing media/books share." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media/books</Config>
+  <Config Name="Books Folder" Target="/books" Default="/mnt/user/data/media/books" Mode="rw" Description="Host folder where your book files live. Point this at your existing media/books share." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media/books</Config>
   <Config Name="App Data" Target="/data" Default="/mnt/user/appdata/bookorbit" Mode="rw" Description="BookOrbit's own app data (config, generated files). BookOrbit manages ownership of this folder automatically." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bookorbit</Config>
 
   <!-- Core required variables -->
